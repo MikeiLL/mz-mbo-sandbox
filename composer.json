@@ -1,0 +1,78 @@
+{
+  "name": "mikeill/mz-mbo-access",
+  "description": "Grant Client Access Based on Mindbody Online API Credentials",
+  "keywords": [
+    "MBO",
+    "mindbody",
+    "wordpress",
+    "plugin",
+    "session"
+  ],
+  "prefer-stable": true,
+  "homepage": "https://github.com/MikeiLL/mz-mbo-access",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Mike iLL Kilmer",
+      "email": "mike@mzoo.org",
+      "homepage": "http://mzoo.org",
+      "role": "Developer"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "scripts": {
+    "lint": [
+      "phpcs --extensions=php src *.php"
+    ],
+    "fix": [
+      "phpcbf --extensions=php src *.php"
+    ],
+    "strauss": [
+      "vendor/bin/strauss"
+    ],
+    "post-install-cmd": [
+      "vendor/bin/strauss"
+    ],
+    "post-update-cmd": [
+      "vendor/bin/strauss"
+    ]
+  },
+  "require": {
+    "php": ">=7.1",
+    "htmlburger/carbon-fields": "*"
+  },
+  "repositories": [
+    {
+      "url": "https://github.com/MikeiLL/strauss",
+      "type": "git"
+    }
+  ],
+  "require-dev": {
+    "mikeill/strauss": "*",
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "MZoo\\MzMboAccess\\": "src"
+    }
+  },
+  "extra": {
+    "mozart": {
+      "dep_namespace": "MZoo\\MBO_Sandbox\\Dependencies\\",
+      "dep_directory": "/src/Mozart/",
+      "packages": [
+        "htmlburger/carbon-fields"
+      ],
+      "delete_vendor_files": true,
+      "override_autoload": {
+        "htmlburger/carbon-fields": {
+          "psr-4": {
+            "Carbon_Fields\\": "core/"
+          }
+        }
+      }
+    }
+  }
+}
