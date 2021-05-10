@@ -2,7 +2,7 @@
 /**
  * @license GPL-2.0-only
  *
- * Modified by Mike iLL Kilmer on 08-May-2021 using Strauss.
+ * Modified by Mike iLL Kilmer on 10-May-2021 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 
@@ -57,16 +57,16 @@ class Loader {
 		add_action( 'wp_ajax_carbon_fields_fetch_association_options', array( $this, 'fetch_association_options' ) );
 
 		# Enable the legacy storage service
-		\Carbon_Fields\Carbon_Fields::service( 'legacy_storage' )->enable();
+		\MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields::service( 'legacy_storage' )->enable();
 
 		# Enable the meta query service
-		\Carbon_Fields\Carbon_Fields::service( 'meta_query' )->enable();
+		\MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields::service( 'meta_query' )->enable();
 
 		# Enable the REST API service
-		\Carbon_Fields\Carbon_Fields::service( 'rest_api' )->enable();
+		\MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields::service( 'rest_api' )->enable();
 
 		# Enable post meta revisions service
-		\Carbon_Fields\Carbon_Fields::service( 'revisions' )->enable();
+		\MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields::service( 'revisions' )->enable();
 
 		# Initialize sidebar manager
 		$this->sidebar_manager->boot();
@@ -232,8 +232,8 @@ class Loader {
 			'config' => array(
 				'locale' => $this->get_ui_translations(),
 				'pagenow' => $pagenow,
-				'compactInput' => \Carbon_Fields\COMPACT_INPUT,
-				'compactInputKey' => \Carbon_Fields\COMPACT_INPUT_KEY,
+				'compactInput' => \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\COMPACT_INPUT,
+				'compactInputKey' => \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\COMPACT_INPUT_KEY,
 				'revisionsInputKey' => $revisions::CHANGE_KEY,
 			)
 		) ) );

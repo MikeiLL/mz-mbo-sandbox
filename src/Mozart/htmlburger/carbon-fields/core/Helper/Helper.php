@@ -2,7 +2,7 @@
 /**
  * @license GPL-2.0-only
  *
- * Modified by Mike iLL Kilmer on 08-May-2021 using Strauss.
+ * Modified by Mike iLL Kilmer on 10-May-2021 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 
@@ -26,7 +26,7 @@ class Helper {
 	 * @return \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Field\Field
 	 */
 	public static function get_field( $container_type, $container_id, $field_name ) {
-		\Carbon_Fields\Carbon_Fields::verify_fields_registered();
+		\MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields::verify_fields_registered();
 
 		$repository = \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields::resolve( 'container_repository' );
 		if ( $container_id ) {
@@ -654,8 +654,8 @@ class Helper {
 	 * @return array
 	 */
 	public static function expand_compacted_input( $input ) {
-		if ( isset( $input[ \Carbon_Fields\COMPACT_INPUT_KEY ] ) ) {
-			$inputs = $input[ \Carbon_Fields\COMPACT_INPUT_KEY ];
+		if ( isset( $input[ \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\COMPACT_INPUT_KEY ] ) ) {
+			$inputs = $input[ \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\COMPACT_INPUT_KEY ];
 			$input = array_merge( $input, $inputs );
 		}
 		return $input;

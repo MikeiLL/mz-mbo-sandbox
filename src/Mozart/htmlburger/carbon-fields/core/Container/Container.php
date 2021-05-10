@@ -2,7 +2,7 @@
 /**
  * @license GPL-2.0-only
  *
- * Modified by Mike iLL Kilmer on 08-May-2021 using Strauss.
+ * Modified by Mike iLL Kilmer on 10-May-2021 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 
@@ -559,7 +559,7 @@ abstract class Container implements Datastore_Holder_Interface {
 					$field = clone $f;
 					$field->set_hierarchy_index( $hierarchy_index );
 				} else {
-					if ( ! ( $f instanceof \Carbon_Fields\Field\Complex_Field ) ) {
+					if ( ! ( $f instanceof \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Field\Complex_Field ) ) {
 						return null;
 					}
 
@@ -827,7 +827,7 @@ abstract class Container implements Datastore_Holder_Interface {
 	public function add_fields( $fields ) {
 		foreach ( $fields as $field ) {
 			if ( ! ( $field instanceof Field ) ) {
-				Incorrect_Syntax_Exception::raise( 'Object must be of type Carbon_Fields\\Field\\Field' );
+				Incorrect_Syntax_Exception::raise( 'Object must be of type MZoo\\MBO_Sandbox\\Dependencies\\Carbon_Fields\\Field\\Field' );
 				return $this;
 			}
 

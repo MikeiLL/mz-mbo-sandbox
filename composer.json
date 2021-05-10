@@ -42,14 +42,8 @@
     "php": ">=7.1",
     "htmlburger/carbon-fields": "*"
   },
-  "repositories": [
-    {
-      "url": "https://github.com/MikeiLL/strauss",
-      "type": "git"
-    }
-  ],
   "require-dev": {
-    "mikeill/strauss": "*",
+    "brianhenryie/strauss": "^0.8.6",
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "*"
   },
@@ -70,7 +64,13 @@
         "htmlburger/carbon-fields": {
           "psr-4": {
             "Carbon_Fields\\": "core/"
-          }
+          },
+          "files": [
+            "config.php",
+            "templates",
+            "assets",
+            "build"
+          ]
         }
       }
     }

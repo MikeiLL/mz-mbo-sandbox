@@ -2,7 +2,7 @@
 /**
  * @license GPL-2.0-only
  *
- * Modified by Mike iLL Kilmer on 08-May-2021 using Strauss.
+ * Modified by Mike iLL Kilmer on 10-May-2021 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 
@@ -169,7 +169,7 @@ class Term_Meta_Container extends Container {
 			$this->set_term_id( $term->term_id );
 		}
 
-		include \Carbon_Fields\DIR . '/templates/Container/term_meta.php';
+		include \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\DIR . '/templates/Container/term_meta.php';
 	}
 
 	/**

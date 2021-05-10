@@ -2,7 +2,7 @@
 /**
  * @license GPL-2.0-only
  *
- * Modified by Mike iLL Kilmer on 08-May-2021 using Strauss.
+ * Modified by Mike iLL Kilmer on 10-May-2021 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 
@@ -73,7 +73,7 @@ class Fulfillable_Collection implements Fulfillable {
 	 * @return Fulfillable_Collection
 	 */
 	protected function create_collection() {
-		return \Carbon_Fields\Carbon_Fields::resolve( 'container_condition_fulfillable_collection' );
+		return \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields::resolve( 'container_condition_fulfillable_collection' );
 	}
 
 	/**

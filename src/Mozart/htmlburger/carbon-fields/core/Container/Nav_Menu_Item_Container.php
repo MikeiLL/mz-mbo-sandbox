@@ -2,7 +2,7 @@
 /**
  * @license GPL-2.0-only
  *
- * Modified by Mike iLL Kilmer on 08-May-2021 using Strauss.
+ * Modified by Mike iLL Kilmer on 10-May-2021 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 
@@ -165,7 +165,7 @@ class Nav_Menu_Item_Container extends Container {
 	 * Output the container markup
 	 */
 	public function render() {
-		include \Carbon_Fields\DIR . '/templates/Container/nav_menu_item.php';
+		include \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\DIR . '/templates/Container/nav_menu_item.php';
 	}
 
 	/**

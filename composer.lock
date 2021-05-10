@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fea837eb22ecac54eda0f8a7df4b990e",
+    "content-hash": "a3a23bd70372be31be09cf74b6ac54dd",
     "packages": [
         {
             "name": "htmlburger/carbon-fields",
@@ -149,16 +149,16 @@
     "packages-dev": [
         {
             "name": "brianhenryie/strauss",
-            "version": "0.8.5",
+            "version": "0.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BrianHenryIE/strauss.git",
-                "reference": "f8938bb52909d4034e642a8fe11b9f274789bcc1"
+                "reference": "1a38da4c73dc7d8b02d6729b4316becd218ceadb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BrianHenryIE/strauss/zipball/f8938bb52909d4034e642a8fe11b9f274789bcc1",
-                "reference": "f8938bb52909d4034e642a8fe11b9f274789bcc1",
+                "url": "https://api.github.com/repos/BrianHenryIE/strauss/zipball/1a38da4c73dc7d8b02d6729b4316becd218ceadb",
+                "reference": "1a38da4c73dc7d8b02d6729b4316becd218ceadb",
                 "shasum": ""
             },
             "require": {
@@ -203,9 +203,9 @@
             "description": "Composes all dependencies as a package inside a WordPress plugin",
             "support": {
                 "issues": "https://github.com/BrianHenryIE/strauss/issues",
-                "source": "https://github.com/BrianHenryIE/strauss/tree/0.8.5"
+                "source": "https://github.com/BrianHenryIE/strauss/tree/0.8.6"
             },
-            "time": "2021-05-08T19:18:46+00:00"
+            "time": "2021-05-08T21:32:43+00:00"
         },
         {
             "name": "composer/ca-bundle",

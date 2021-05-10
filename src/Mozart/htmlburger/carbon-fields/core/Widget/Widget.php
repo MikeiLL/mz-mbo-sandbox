@@ -2,7 +2,7 @@
 /**
  * @license GPL-2.0-only
  *
- * Modified by Mike iLL Kilmer on 08-May-2021 using Strauss.
+ * Modified by Mike iLL Kilmer on 10-May-2021 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 
@@ -67,7 +67,7 @@ abstract class Widget extends \WP_Widget {
 	 * @param string $classname   String of CSS classes
 	 */
 	public function setup( $widget_id, $title, $description, $fields, $classname = '' ) {
-		\Carbon_Fields\Carbon_Fields::verify_boot();
+		\MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields::verify_boot();
 		$widget_id = $this->widget_id_prefix . $widget_id;
 
 		$this->datastore = Datastore::make( 'widget' );
@@ -211,8 +211,8 @@ abstract class Widget extends \WP_Widget {
 	 */
 	public function add_fields( $fields ) {
 		foreach ( $fields as $field ) {
-			if ( ! ( $field instanceof \Carbon_Fields\Field\Field ) ) {
-				Incorrect_Syntax_Exception::raise( 'Object must be of type Carbon_Fields\\Field\\Field' );
+			if ( ! ( $field instanceof \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Field\Field ) ) {
+				Incorrect_Syntax_Exception::raise( 'Object must be of type MZoo\\MBO_Sandbox\\Dependencies\\Carbon_Fields\\Field\\Field' );
 				return;
 			}
 			$this->register_field_name( $field->get_name() );

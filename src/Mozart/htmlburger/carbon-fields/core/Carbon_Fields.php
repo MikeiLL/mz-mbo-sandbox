@@ -2,7 +2,7 @@
 /**
  * @license GPL-2.0-only
  *
- * Modified by Mike iLL Kilmer on 08-May-2021 using Strauss.
+ * Modified by Mike iLL Kilmer on 10-May-2021 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 
@@ -172,7 +172,7 @@ final class Carbon_Fields {
 	}
 
 	/**
-	 * Replace the ioc container for Carbon_Fields\Carbon_Fields
+	 * Replace the ioc container for MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields
 	 *
 	 * @param  PimpleContainer $ioc
 	 */
@@ -210,7 +210,7 @@ final class Carbon_Fields {
 	 */
 	public static function verify_boot() {
 		if ( ! static::is_booted() ) {
-			throw new \Exception( 'You must call Carbon_Fields\Carbon_Fields::boot() in a suitable WordPress hook before using Carbon Fields.' );
+			throw new \Exception( 'You must call MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Carbon_Fields::boot() in a suitable WordPress hook before using Carbon Fields.' );
 		}
 	}
 

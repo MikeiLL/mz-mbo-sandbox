@@ -2,7 +2,7 @@
 /**
  * @license GPL-2.0-only
  *
- * Modified by Mike iLL Kilmer on 08-May-2021 using Strauss.
+ * Modified by Mike iLL Kilmer on 10-May-2021 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 
@@ -68,7 +68,7 @@ abstract class Meta_Datastore extends Key_Value_Datastore {
 		global $wpdb;
 
 		$storage_key_patterns = $this->key_toolset->get_storage_key_deleter_patterns(
-			( $field instanceof \Carbon_Fields\Field\Complex_Field ),
+			( $field instanceof \MZoo\MBO_Sandbox\Dependencies\Carbon_Fields\Field\Complex_Field ),
 			$field->is_simple_root_field(),
 			$this->get_full_hierarchy_for_field( $field ),
 			$this->get_full_hierarchy_index_for_field( $field )
